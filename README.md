@@ -87,6 +87,7 @@ vidz-backend/
 ├── .env.sample
 ├── package.json
 └── README.md
+└── Dockerfile
 ```
 
 ## API Documentation
@@ -116,3 +117,11 @@ For questions, suggestions, or support, open an issue or contact [@sonu-shivchar
 ---
 
 *Happy coding!*
+
+## Dockerfile
+
+To run mongodb 
+docker run -d   --name mongo-db   --network backend-network   -p 27017:27017   mongo:6.0
+
+To run backend
+docker run -d --name backend-container --network backend-network -p 8000:8000 backend-app
